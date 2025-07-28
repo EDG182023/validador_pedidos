@@ -141,3 +141,14 @@ API OBTENER STOCK:             curl --location 'https://soft.esalogistica.com.ar
             --header 'Content-Type: application/json'
 
         
+
+## Python version
+This repository now includes a minimal FastAPI server under `python_app`. Install dependencies with:
+```
+pip install fastapi uvicorn requests openpyxl pyodbc
+```
+Run the server using:
+```
+uvicorn python_app.main:app --reload
+```
+
