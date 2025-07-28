@@ -17,7 +17,8 @@ namespace ValidadorPedidos.Services
                 {
                     Numero = Convert.ToInt32(ws.Cells[row, 1].Value),
                     ClienteCodigo = ws.Cells[row, 2].Text,
-                    FechaEmision = DateTime.Parse(ws.Cells[row, 3].Text)
+                    FechaEmision = DateTime.Parse(ws.Cells[row, 3].Text),
+                    TipoCodigo = ws.Cells[row, 6].Text
                 };
 
                 var detalle = new List<DetalleDto>
@@ -26,7 +27,8 @@ namespace ValidadorPedidos.Services
                     {
                         Linea = 1,
                         ProductoCodigo = ws.Cells[row, 4].Text,
-                        Cantidad = Convert.ToInt32(ws.Cells[row, 5].Value)
+                        Cantidad = Convert.ToInt32(ws.Cells[row, 5].Value),
+                        ProductoCompaniaCodigo = ws.Cells[row, 6].Text
                     }
                 };
 
